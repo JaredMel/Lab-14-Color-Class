@@ -16,6 +16,10 @@ class Color
         //private variables
         int red, green, blue;
     public:
+        //constructors
+        Color() {red = 0; green = 0; blue = 0;}
+        Color(int r, int g, int b) {red = r; green = g; blue = b;}
+        Color(int r) {red = r; green = 0; blue = 0;}
         //getters and setters
         int getRed() {return red;}
         int getGreen() {return green;}
@@ -37,20 +41,13 @@ class Color
 int main()
 {
     //Declares and initilizes variables
-    Color color1, color2, color3;
+    Color color1;
     //sets and prints color1
-    color1.setRed(0);
-    color1.setGreen(0);
-    color1.setBlue(0);
     color1.print();
     //sets and prints color2
-    color2.setRed(100);
-    color2.setGreen(100);
-    color2.setBlue(100);
+    Color color2(66, 77, 88);
     color2.print();
     //sets and prints color3
-    color3.setRed(56);
-    color3.setGreen(78);
-    color3.setBlue(39);
+    Color color3(99);
     color3.print();
 }
